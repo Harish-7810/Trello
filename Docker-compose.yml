@@ -1,0 +1,33 @@
+version: '3'
+services:
+
+  mysql:
+    image: mysql
+    container_name: mysql
+    volumes:
+      - trello-data:/mnt
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_DB=mysql
+      - MYSQL_PASSWORD=Harish@4
+      - MYSQL_ROOT_PASSWORD=Harish@4
+
+  trello-backend-main:
+    build: ./trello-backend-main
+    container_name: trello-backend
+    ports:
+      - 3200:3200
+    links:
+      - mysql
+
+  trello-frontend-main:
+    build: ./trello-frontend-main
+    container_name: trello-frontend
+    ports:
+      - 4201:4201
+    links:
+      - trello-backend-main
+
+volumes:
+  trello-data:

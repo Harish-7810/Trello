@@ -1,0 +1,35 @@
+.lightbox {
+  position: absolute;
+  margin: auto;
+  background: rgb(255, 255, 255);
+  transition: 0.3s all;
+  opacity: 1;
+  z-index: 1;
+  overflow-y: scroll;
+  border-radius: 2%;
+  border: 2px ridge rgb(177, 99, 79);
+  padding: 30px;
+  flex-direction: column;
+  gap: 30px;
+  min-width: 550px;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 650px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.CloseBtn {
+  float: right;
+}
+.hide-lightbox {
+  opacity: 0;
+  pointer-events: none;
+
+  z-index: -1;
+}
+.cardinfo-box-title {
+  display: contents;
+}
+.Attach {
+  font-weight: bold;
+}
