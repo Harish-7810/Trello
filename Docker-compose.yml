@@ -4,6 +4,7 @@ services:
   mysql:
     image: mysql
     container_name: mysql
+    restart: always
     volumes:
       - trello-data:/mnt
     ports:
@@ -16,6 +17,7 @@ services:
   trello-backend-main:
     build: ./trello-backend-main
     container_name: trello-backend
+    restart: always
     ports:
       - 3200:3200
     links:
@@ -24,6 +26,7 @@ services:
   trello-frontend-main:
     build: ./trello-frontend-main
     container_name: trello-frontend
+    restart: always
     ports:
       - 4201:4201
     links:
