@@ -4,8 +4,7 @@ This application has the following:
 *Backend &
 *Database (MySql)
 
-This application needs the following to run including git:
-*WSL (for Docker) & Docker.
+This application needs a Database to work it can be either in local machine or docker container.
 
 author,
 M.D.Khaleem
