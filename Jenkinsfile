@@ -1,6 +1,14 @@
 pipeline {
     agent any
 
+     stages {
+        stage('Checkout') {
+            steps {
+                // Checkout code from Git repository
+                git 'https://github.com/Harish-410/Trello.git'
+            }
+        }
+
     stages {
         stage('Build and Run Docker Compose') {
             steps {
