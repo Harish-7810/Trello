@@ -8,8 +8,6 @@ pipeline {
                 git 'https://github.com/Harish-410/Trello.git'
             }
         }
-
-    stages {
         stage('Build and Run Docker Compose') {
             steps {
                 script {
